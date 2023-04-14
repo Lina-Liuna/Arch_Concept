@@ -13,7 +13,7 @@ image:gallery/Deployment.png[Deployment,1000,,link="https://github.com/Lina-Liun
 
 
 ==== Kubernetes Cluster
-image:gallery/Kubernetes Cluster.png[Kubernetes_Cluster,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Kubernetes_Cluster.png"]
+image:gallery/Kubernetes_Cluster.png[Kubernetes_Cluster,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Kubernetes_Cluster.png"]
 
 2. Operating System
 3. Network
