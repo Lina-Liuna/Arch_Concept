@@ -27,5 +27,9 @@ image:gallery/Node_Pod_Container.png[Node_Pod_Container,1000,,link="https://gith
 image:gallery/Operating_System_3_easy_pieces_Contents.png[Operating_System_3_easy_pieces_Contents,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Operating_System_3_easy_pieces_Contents.png"]
 
 
+==== CPU Virtualization
+image:gallery/CPU_Virtualization.png[CPU_Virtualization,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/CPU_Virtualization.png"]
+
+
 3. Network
 4. ...
