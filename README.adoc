@@ -1,4 +1,5 @@
 basic concept of:
+
 = Cloud computing
 
 === Kubernetes
@@ -14,6 +15,11 @@ image:gallery/Deployment.png[Deployment,1000,,link="https://github.com/Lina-Liun
 
 ==== Kubernetes Cluster
 image:gallery/Kubernetes_Cluster.png[Kubernetes_Cluster,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Kubernetes_Cluster.png"]
+
+
+==== Node Pod Container
+image:gallery/Node_Pod_Container.png[Node_Pod_Container,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Node_Pod_Container.png"]
+
 
 2. Operating System
 3. Network
