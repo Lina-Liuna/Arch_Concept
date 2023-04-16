@@ -34,5 +34,11 @@ image:gallery/Operating_System_3_easy_pieces_Contents.png[Operating_System_3_eas
 image:gallery/CPU_Virtualization.png[CPU_Virtualization,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/CPU_Virtualization.png"]
 
 
+==== Memory Virtualization
+image:gallery/Memory_Virtualization.png[Memory_Virtualization,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Memory_Virtualization.png"]
+
+
+
+
 3. Network
 4. ...
