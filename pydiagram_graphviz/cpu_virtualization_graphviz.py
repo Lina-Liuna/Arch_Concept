@@ -81,21 +81,51 @@ data_struct_3 = {
     'sub':[
         {
             'c': 'introduction',
-            'n': ['workload']
+            'n': ['workload', 'Metrics, repsonse time',
+                  'Incorporating I/O', 'FIFO', 'Shorted Job First',
+                  'Shortest Time-to-Completion First', "Round Robin", "Nor more Oracle"]
         },
         {
-            'c': 'MLFQ',
-            'n':['basic rules']
+            'c': 'Multi-Level Feedback Queue',
+            'n':['basic rules', 'Tuning MLFQ issue'],
+            'sub':[
+                {
+                    'c': 'Attempt',
+                    "n": ['how to change priority',
+                          'the priority boost',
+                          'better accounting']
+                }
+            ]
 
         },
+        {
+            'c': 'Proportional Share',
+            'n':['Linux Completely Fair Scheduler'],
+            'sub':[
+                {
+                    'c':'Tickets',
+                    'n':['mechaism', 'implementation',
+                         'Example', 'how to assgin tickets',
+                         "why not determinstic"]
+                }
+            ]
+
+        },
+        {
+            'c':'Multiprocessor',
+            'n':['Architecture', 'Synchronization', 'Cache Affinity',
+                 'Single-Queue Scheduling', 'Multi-Queue Scheduling',
+                 'Linux Multi-Processor Scheduling']
+        }
+
     ]
 
 
 }
 data_struct = {
    'g': 'CPU Virtualization',
-    'sub':[data_struct_1,
-           data_struct_2,
+    'sub':[# data_struct_1,
+           # data_struct_2,
            data_struct_3,
 
 
@@ -103,14 +133,23 @@ data_struct = {
 
 }
 def sub_diagram(label_ds, graph, sub_name):
+
     with graph.subgraph(name=sub_name) as c:
-        c.attr(fillcolor=random_color(), label=label_ds['c'], fontcolor='white',
-               style='filled', gradientangle='370',rankdir='TB')
+        c.attr(rankdir='TB')
+        c.attr(fillcolor=random_color(), label=label_ds['c'], fontcolor='black',
+               style='filled', gradientangle='100',rankdir='TB')
+        first_node = 'None'
         if 'n' in label_ds:
             for item in label_ds['n']:
+                c.attr(rankdir='TB')
                 c.attr('node', shape='box', fillcolor=random_color(),
                     style='filled', gradientangle='20',rankdir='TB')
+                c.attr(rankdir='TB')
                 c.node(item)
+                if first_node != 'None':
+                    c.edge(first_node, item, penwidth='0.0', len='0.1')
+                first_node = item
+
         if 'sub' in label_ds:
             count = 0
             for sub_ds in label_ds['sub']:
@@ -118,9 +157,11 @@ def sub_diagram(label_ds, graph, sub_name):
                 sub_diagram(sub_ds, c, 'Cluster' + str(count))
                 count += 1
 
+
+
 def diagram(label_ds, file_name):
     g = graphviz.Graph('G', filename= file_name)
-    g.attr(bgcolor=random_color(), label=label_ds['g'], fontcolor='white', style='filled',rankdir='TB')
+    g.attr(bgcolor=random_color(), label=label_ds['g'], fontcolor='black', style='filled',rankdir='TB')
     g.attr(rankdir='TB')
     if 'n' in label_ds:
         for item in label_ds['n']:
@@ -128,13 +169,14 @@ def diagram(label_ds, file_name):
                    style='filled', gradientangle='20',rankdir='TB')
             g.attr(rankdir='TB')
             g.node(item)
+
+
     if 'sub' in label_ds:
         count = 0
         for sub_ds in label_ds['sub']:
             print(f'{count} : {sub_ds.items()}')
             sub_diagram(sub_ds, g, 'Cluster'+ str(count))
             count += 1
-
 
     g.view()
 
