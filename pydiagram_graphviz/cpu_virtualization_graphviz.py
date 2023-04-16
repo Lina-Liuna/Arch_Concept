@@ -52,41 +52,88 @@ def random_color():
     return c1 + ":" + c2
 
 
-data_struct = {
-    'g' : 'Process',
+data_struct_1 = {
+    'c' : 'Process',
     "n" : ["process create", "process state", "process tools", "process control"],
-    'sub' :  {
+    'sub' :  [{
     'c': 'API',
-    'sub' :  {
+    'sub' :  [{
     'c' : "System Call",
     'n' : ['fork()', 'wait()', 'exec()']
-}
-}
+}]}]
 
 }
-def sub_diagram(label_ds, graph):
-    with graph.subgraph(name='clusterC') as c:
+data_struct_2 = {
+    'c' : 'Mechanism',
+    'sub' : [{
+        'c' : 'technique',
+        'n' :['limited direct execution']
+    },
+    {
+        'c': 'Problem',
+        'n':["restricted operations", 'swtiching between process']
+    }]
+
+
+}
+data_struct_3 = {
+    'c' : 'Scheduling',
+    'sub':[
+        {
+            'c': 'introduction',
+            'n': ['workload']
+        },
+        {
+            'c': 'MLFQ',
+            'n':['basic rules']
+
+        },
+    ]
+
+
+}
+data_struct = {
+   'g': 'CPU Virtualization',
+    'sub':[data_struct_1,
+           data_struct_2,
+           data_struct_3,
+
+
+    ]
+
+}
+def sub_diagram(label_ds, graph, sub_name):
+    with graph.subgraph(name=sub_name) as c:
         c.attr(fillcolor=random_color(), label=label_ds['c'], fontcolor='white',
-               style='filled', gradientangle='370')
+               style='filled', gradientangle='370',rankdir='TB')
         if 'n' in label_ds:
             for item in label_ds['n']:
                 c.attr('node', shape='box', fillcolor=random_color(),
-                    style='filled', gradientangle='20')
+                    style='filled', gradientangle='20',rankdir='TB')
                 c.node(item)
         if 'sub' in label_ds:
-            sub_diagram(label_ds['sub'], c)
-
+            count = 0
+            for sub_ds in label_ds['sub']:
+                print(f'{count} : {sub_ds}')
+                sub_diagram(sub_ds, c, 'Cluster' + str(count))
+                count += 1
 
 def diagram(label_ds, file_name):
     g = graphviz.Graph('G', filename= file_name)
-    g.attr(bgcolor=random_color(), label=label_ds['g'], fontcolor='white', style='filled')
+    g.attr(bgcolor=random_color(), label=label_ds['g'], fontcolor='white', style='filled',rankdir='TB')
+    g.attr(rankdir='TB')
     if 'n' in label_ds:
         for item in label_ds['n']:
             g.attr('node', shape='box', fillcolor=random_color(),
-                   style='filled', gradientangle='20')
+                   style='filled', gradientangle='20',rankdir='TB')
+            g.attr(rankdir='TB')
             g.node(item)
     if 'sub' in label_ds:
-        sub_diagram(label_ds['sub'], g)
+        count = 0
+        for sub_ds in label_ds['sub']:
+            print(f'{count} : {sub_ds.items()}')
+            sub_diagram(sub_ds, g, 'Cluster'+ str(count))
+            count += 1
 
 
     g.view()
