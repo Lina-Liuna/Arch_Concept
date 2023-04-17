@@ -51,106 +51,161 @@ def random_color():
 
     return c1 + ":" + c2
 
-
-data_struct_1 = {
-    'c' : 'Process',
-    "n" : ["process create", "process state", "process tools", "process control"],
-    'sub' :  [{
-    'c': 'API',
-    'sub' :  [{
-    'c' : "System Call",
-    'n' : ['fork()', 'wait()', 'exec()']
-}]}]
-
+intro_ds = {
+    'c': 'Introduction',
+    'n': [
+        '1. Why use Threads?',
+        "2. How to create a thread?",
+        "3. Why it get worse, because of shared data?",
+        '4. The heart of the problem: uncontrolled scheduling',
+        '5. One more problem: waiting for another',
+        '6. The wish for atomicity',
+        "7. why in OS class?"
+    ]
 }
-data_struct_2 = {
-    'c' : 'Mechanism',
-    'sub' : [{
-        'c' : 'technique',
-        'n' :['limited direct execution']
-    },
-    {
-        'c': 'Problem',
-        'n':["restricted operations", 'swtiching between process']
-    }]
-
-
+interlude_ds = {
+    'c': 'Interlude: Thread API',
+    'n':[
+        '1. Thread Creation',
+        '2. Thread Completion',
+        '3. Locks',
+        '4. Condition Variables',
+        '5. Compiling and Running'
+    ]
 }
-data_struct_3 = {
-    'c' : 'Scheduling',
-    'sub':[
-        {
-            'c': 'introduction',
-            'n': ['workload', 'Metrics, repsonse time',
-                  'Incorporating I/O', 'FIFO', 'Shorted Job First',
-                  'Shortest Time-to-Completion First', "Round Robin", "Nor more Oracle"]
-        },
-        {
-            'c': 'Multi-Level Feedback Queue',
-            'n':['basic rules', 'Tuning MLFQ issue'],
-            'sub':[
-                {
-                    'c': 'Attempt',
-                    "n": ['how to change priority',
-                          'the priority boost',
-                          'better accounting']
-                }
-            ]
+locks_ds = {
+    'c' : 'Locks',
+    'n' : [
+        '1. The basic idea',
+        '2. Pthread Locks',
+        '3. Building A Lock',
+        '4. Evaluating Locks',
+        '5. Controlling Interrupts',
+        '6. A Failed Attempt: Just Using Loads Stores',
+        '7. Building working spin locks with Test-and-set',
+        '8. Evaluating Spin Locks',
+        '9. Compare and swap',
+        '10. Load-Linked and Store-Conditional',
+        '11. Fetch-And-Add',
+        '12. Too much spinning, what now?',
+        '13. Using Queues: Sleeping instead of Spinning',
+        '14. Different OS, different support',
+        '15. Two-Phase Locks'
+    ]
+}
+lock_based_concurrent_ds_ds = {
+    'c': 'Lock-based Concurrent Data Structures',
+    'n':[
+        '1. Concurrent Counters',
+        '2. Concurrent Linked Lists',
+        '3. Concurrent Queues',
+        '4. Concurrent Hash Table'
+    ]
+}
 
-        },
-        {
-            'c': 'Proportional Share',
-            'n':['Linux Completely Fair Scheduler'],
-            'sub':[
-                {
-                    'c':'Tickets',
-                    'n':['mechaism', 'implementation',
-                         'Example', 'how to assgin tickets',
-                         "why not determinstic"]
-                }
-            ]
+c_v_ds = {
+    'c': 'Condition Variables',
+    'n':[
+        '1. what is condition variable?',
+        '2. The routines of condition variable',
+        '3. The Producer/Consummer(Bounded Buffer) Problem'
+        '4. Convering Conditions'
+    ]
+}
+s_ds = {
+    'c': "Semaphores",
+    'n' : [
+        '1. What is semaphore?',
+        '2. Binary Semaphores(Locks)',
+        '3. Semaphores for ordering',
+        '4. The Producer/Consumer(Bound Buffer) Problem',
+        '5. Reader-Writer Locks',
+        '6. The Dining Philosophers',
+        '7. How to implement Semaphores?',
+    ]
+}
 
-        },
-        {
-            'c':'Multiprocessor',
-            'n':['Architecture', 'Synchronization', 'Cache Affinity',
-                 'Single-Queue Scheduling', 'Multi-Queue Scheduling',
-                 'Linux Multi-Processor Scheduling']
-        }
+common_concurrency_ds = {
+    'c': 'Common Concurrency Problems',
+    'n':[
+        '1. What types of bugs exist?',
+        '2. Non-Deadlock bugs',
+        '3. Deadlock Bugs'
+    ]
+}
 
+eb_c_ds = {
+    'c' :'Event-based Concurrency(Advanced)',
+    'n' : [
+        '1. The basic idea: an event loop',
+        '2. An Important API: select()/poll()',
+        '3. using select()',
+        '4. Why Simpler? No locks needed',
+        '5. A problem: Blocking System Calls',
+        '6. A Solution: Asynchronous I/O',
+        '7. Another Problem: State management',
+        '8. What is still difficult with events'
     ]
 
-
 }
+
+
+
+
+
 data_struct = {
-   'g': 'CPU Virtualization',
-    'sub':[ data_struct_1,
-            data_struct_2,
-           data_struct_3,
+   'g': 'Concurrency ',
+    'sub':[
+       # intro_ds,
+       # interlude_ds,
+       # locks_ds,
+       # lock_based_concurrent_ds_ds,
+        c_v_ds,
+        s_ds,
+        common_concurrency_ds,
+        eb_c_ds
+
+
 
 
     ]
 
 }
 
+def alignment_questions_arr(arr):
+    rst_arr = list()
+    max_len = max(arr, key=len)
+    print(len(max_len))
+    for item in arr:
+        rst_arr.append((len(max_len) - len(item)))
+    return rst_arr
+
+def get_node_label(node_name,arr):
+    rst_arr_len= alignment_questions_arr(arr)
+    label_str = '{'
+    # '{<f0> Data|<f1> Next}'
+    for rank, (item, item_len) in enumerate(zip(arr, rst_arr_len), 0):
+        print(len(item))
+        label_str += f'<f{rank}> {item}'
+        label_str += '_' * item_len
+        if rank != len(arr) - 1:
+            label_str += '|'
+        else:
+            label_str += '}'
+    return label_str
 
 def sub_diagram(label_ds, graph, sub_name):
 
     with graph.subgraph(name=sub_name) as c:
         c.attr(rankdir='TB')
+        c.attr(fontname='Comic Sans MS')
         c.attr(fillcolor=random_color(), label=label_ds['c'], fontcolor='black',
                style='filled', gradientangle='100',rankdir='TB')
-        first_node = 'None'
         if 'n' in label_ds:
-            for item in label_ds['n']:
-                c.attr(rankdir='TB')
-                c.attr('node', shape='box', fillcolor=random_color(),
-                    style='filled', gradientangle='20',rankdir='TB')
-                c.attr(rankdir='TB')
-                c.node(item)
-                if first_node != 'None':
-                    c.edge(first_node, item, penwidth='0.0', len='0.1')
-                first_node = item
+            lstr = get_node_label(label_ds['c'], label_ds['n'])
+
+            c.node(label_ds['c'], shape='record',
+                    label= lstr, fontname='Monaco', fontcolor='black')
 
         if 'sub' in label_ds:
             count = 0
@@ -164,6 +219,7 @@ def diagram(label_ds, file_name):
     g = graphviz.Graph('G', filename= file_name)
     g.attr(bgcolor=random_color(), label=label_ds['g'], fontcolor='black', style='filled',rankdir='TB')
     g.attr(rankdir='TB')
+    g.attr(fontname='Comic Sans MS')
     if 'n' in label_ds:
         for item in label_ds['n']:
             g.attr('node', shape='box', fillcolor=random_color(),
