@@ -42,6 +42,9 @@ image:gallery/Memory_Virtualization.png[Memory_Virtualization,1000,,link="https:
 
 image:gallery/Concurrency.png[Concurrency,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Concurrency.png"]
 
+==== Persistence
+
+image:gallery/Persistence.png[Persistence,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Persistence.png"]
 
 3. Network
 4. ...
