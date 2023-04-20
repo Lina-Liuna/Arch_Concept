@@ -46,5 +46,9 @@ image:gallery/Concurrency.png[Concurrency,1000,,link="https://github.com/Lina-Li
 
 image:gallery/Persistence.png[Persistence,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Persistence.png"]
 
+==== what_happes_when_a_program_runs
+
+image:gallery/what_happes_when_a_program_runs.png[what_happes_when_a_program_runs,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/what_happes_when_a_program_runs.png"]
+
 3. Network
 4. ...
