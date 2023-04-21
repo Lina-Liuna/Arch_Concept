@@ -55,5 +55,10 @@ image:gallery/what_happes_when_a_program_runs.png[what_happes_when_a_program_run
 image:gallery/os_as_a_virtual_machine.png[os_as_a_virtual_machine,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/os_as_a_virtual_machine.png"]
 
 
+==== virtualizing_the_CPU
+
+image:gallery/virtualizing_the_CPU.png[virtualizing_the_CPU,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/virtualizing_the_CPU.png"]
+
+
 3. Network
 4. ...
