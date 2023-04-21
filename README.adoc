@@ -60,5 +60,10 @@ image:gallery/os_as_a_virtual_machine.png[os_as_a_virtual_machine,1000,,link="ht
 image:gallery/virtualizing_the_CPU.png[virtualizing_the_CPU,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/virtualizing_the_CPU.png"]
 
 
+==== Virtualizing_the_memory
+
+image:gallery/Virtualizing_the_memory.png[Virtualizing_the_memory,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Virtualizing_the_memory.png"]
+
+
 3. Network
 4. ...
