@@ -64,6 +64,10 @@ image:gallery/virtualizing_the_CPU.png[virtualizing_the_CPU,1000,,link="https://
 
 image:gallery/Virtualizing_the_memory.png[Virtualizing_the_memory,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Virtualizing_the_memory.png"]
 
+==== multi_thread_concurrency
+
+image:gallery/multi_thread_concurrency.png[multi_thread_concurrency,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/multi_thread_concurrency.png"]
+
 
 3. Network
 4. ...
