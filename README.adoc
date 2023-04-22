@@ -53,6 +53,10 @@ image:gallery/Persistence.png[Persistence,1000,,link="https://github.com/Lina-Li
 
 image:gallery/what_happes_when_a_program_runs.png[what_happes_when_a_program_runs,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/what_happes_when_a_program_runs.png"]
 
+==== what_a_program_can_read_or_update_when_it_is_running
+image:gallery/what_a_program_can_read_or_update_when_it_is_running.png[what_a_program_can_read_or_update_when_it_is_running,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/what_a_program_can_read_or_update_when_it_is_running.png"]
+
+
 ==== os_as_a_virtual_machine
 
 image:gallery/os_as_a_virtual_machine.png[os_as_a_virtual_machine,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/os_as_a_virtual_machine.png"]
