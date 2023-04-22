@@ -83,6 +83,9 @@ image:gallery/OS_design_Goals.png[OS_design_Goals,1000,,link="https://github.com
 
 image:gallery/process_API.png[process_API,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/process_API.png"]
 
+==== How_does_the_OS_get_a_program_up_and_running
+image:gallery/How_does_the_OS_get_a_program_up_and_running.png[How_does_the_OS_get_a_program_up_and_running,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/How_does_the_OS_get_a_program_up_and_running.png"]
+
 
 3. Network
 4. ...
