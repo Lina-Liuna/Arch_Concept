@@ -86,6 +86,8 @@ image:gallery/process_API.png[process_API,1000,,link="https://github.com/Lina-Li
 ==== How_does_the_OS_get_a_program_up_and_running
 image:gallery/How_does_the_OS_get_a_program_up_and_running.png[How_does_the_OS_get_a_program_up_and_running,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/How_does_the_OS_get_a_program_up_and_running.png"]
 
+==== Process_State_Transitions
+image:gallery/Process_State_Transitions.png[Process_State_Transitions,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/Process_State_Transitions.png"]
 
 3. Network
 4. ...
