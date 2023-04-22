@@ -79,6 +79,10 @@ image:gallery/multi_thread_concurrency.png[multi_thread_concurrency,1000,,link="
 
 image:gallery/OS_design_Goals.png[OS_design_Goals,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/OS_design_Goals.png"]
 
+==== process API
+
+image:gallery/process_API.png[process_API,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/process_API.png"]
+
 
 3. Network
 4. ...
