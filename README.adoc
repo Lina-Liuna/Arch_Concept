@@ -92,6 +92,9 @@ image:gallery/Process_State_Transitions.png[Process_State_Transitions,1000,,link
 ==== OS_data_structure_Process_List
 image:gallery/OS_data_structure_Process_List.png[OS_data_structure_Process_List,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/OS_data_structure_Process_List.png"]
 
+==== fork()
+image:gallery/fork().png[fork(),1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/fork().png"]
+
 
 3. Network
 4. ...
