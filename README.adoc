@@ -95,6 +95,9 @@ image:gallery/OS_data_structure_Process_List.png[OS_data_structure_Process_List,
 ==== fork()
 image:gallery/fork().png[fork(),1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/fork().png"]
 
+==== when_you_type_cmd_in_shell_what_happened
+image:gallery/when_you_type_cmd_in_shell_what_happened.png[when_you_type_cmd_in_shell_what_happened,1000,,link="https://github.com/Lina-Liuna/Arch_Concept/blob/main/gallery/when_you_type_cmd_in_shell_what_happened.png"]
+
 
 3. Network
 4. ...
